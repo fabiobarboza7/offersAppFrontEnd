@@ -1,16 +1,22 @@
 import React, { useEffect } from 'react';
 
-import { findAllOffers } from '../../services/offers.service';
+import { findAllOffers } from '../../../services/offers.service';
+import Form from '../../../components/Form';
 
 export default function Admin() {
   useEffect(() => {
     async function getAllOffers() {
       const { data } = await findAllOffers();
-      // console.log(data);
+      console.log(data);
     }
 
     getAllOffers();
   }, []);
 
-  return <h1>Admin</h1>;
+  return (
+    <>
+      <Form />
+      <h1>Admin</h1>
+    </>
+  );
 }
