@@ -28,7 +28,7 @@ export default function Home() {
       <Header title="Home" />
       <HomeContainer>
         {enabledOffers?.map(offer => (
-          <OfferCard>
+          <OfferCard key={offer.id}>
             <OfferTitle>{offer.advertiser_name}</OfferTitle>
             <ShopNow href={offer.url} target="_blank" rel="noopener noreferrer">
               SHOP NOW
