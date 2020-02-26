@@ -20,8 +20,8 @@ export const createOffer = async offer => {
     history.push('/admin');
     return false;
   } catch (error) {
-    toast.error(error.response.data.message);
-    const listOfErrors = error.response.data.data;
+    toast.error(error.response?.data.message);
+    const listOfErrors = error.response?.data.data;
     return listOfErrors;
   }
 };
