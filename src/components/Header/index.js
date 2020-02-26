@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Logo, HeaderContainer } from './styles';
 
-export default function Header() {
+export default function Header({ title }) {
   return (
     <HeaderContainer>
       <Logo />
-      <h1>Admin</h1>
+      <h1>{title}</h1>
     </HeaderContainer>
   );
 }

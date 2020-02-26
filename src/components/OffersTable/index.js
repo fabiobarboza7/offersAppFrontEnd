@@ -31,7 +31,9 @@ export default function OffersTable() {
                   {row.url}
                 </a>
               </td>
-              <td><DotStates isEnabled={row.state}/></td>
+              <td>
+                <DotStates isEnabled={row.state} />
+              </td>
               <td>
                 <ActionButtons id={row.id} row={row} />
               </td>

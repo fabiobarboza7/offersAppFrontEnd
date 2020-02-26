@@ -7,7 +7,7 @@ import { NewOfferContainer } from './styles';
 export default function NewOffer() {
   return (
     <>
-      <Header />
+      <Header title="Admin" />
       <NewOfferContainer>
         <Form />
       </NewOfferContainer>

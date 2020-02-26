@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const OffersContainer = styled.main`
-  height: calc(100vh - 150px);
+  min-height: calc(100vh - 150px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@ export const CreateNewOffer = styled(Link).attrs({
 })`
   text-decoration: none;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 100%;
   padding: 10px 0;
   background: linear-gradient(45deg, var(--primary-color), #11e3a9);

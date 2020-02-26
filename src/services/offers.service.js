@@ -18,11 +18,11 @@ export const createOffer = async offer => {
     const { message } = data;
     toast.success(message);
     history.push('/admin');
+    return false;
   } catch (error) {
     toast.error(error.response.data.message);
     const listOfErrors = error.response.data.data;
     return listOfErrors;
-    // toast.error('the offers could not be created');
   }
 };
 
@@ -32,6 +32,7 @@ export const editOffer = async (offerId, offer) => {
     const { message } = data;
     toast.success(message);
     history.push('/admin');
+    return false;
   } catch (error) {
     toast.error(error.response.data.message);
     const listOfErrors = error.response.data.data;

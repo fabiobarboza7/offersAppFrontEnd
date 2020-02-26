@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
 import Header from '../../../components/Header';
 import { useOffers } from '../../../hooks/offers.hooks';
 
@@ -18,10 +19,11 @@ export default function Admin() {
   }, [dispatch, offers]);
   return (
     <>
-      <Header />
+      <Header title="Admin" />
       <OffersContainer>
         <OffersTable />
         <CreateNewOffer>NEW OFFER</CreateNewOffer>
+        <Link to="/">go home</Link>
       </OffersContainer>
     </>
   );

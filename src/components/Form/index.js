@@ -56,7 +56,7 @@ export default function Form({ editMode, editData }) {
         <ErrorTitle>Errors List</ErrorTitle>
         <ErrorContainer>
           {errors.map(error => (
-            <ErrorText>{error}</ErrorText>
+            <ErrorText key={error}>{error}</ErrorText>
           ))}
         </ErrorContainer>
       </>
@@ -98,7 +98,6 @@ export default function Form({ editMode, editData }) {
           placeholder="starts at"
         />
         <input
-          id={data.ends_at}
           onChange={handleChange}
           type="date"
           value={data.ends_at || ''}

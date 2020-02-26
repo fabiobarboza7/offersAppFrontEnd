@@ -21,6 +21,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  parser: "babel-eslint",
   plugins: [
     'react',
     'prettier',
@@ -30,15 +31,17 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
       'warn',
-      {extensions: ['.jsx', '.js']}
+      { extensions: ['.jsx', '.js'] }
     ],
     'import/prefer-default-export': 'off',
-    'camelcase': 'off',
     'no-underscore-dangle': 'off',
     'no-param-reassign': 'off',
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/no-unresolved': 'off'
+    'import/no-unresolved': 'off',
+    'no-console': 'off',
+    'camelcase': 'off',
+    'react/jsx-props-no-spreading': 'off'
   },
 };

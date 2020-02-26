@@ -21,7 +21,7 @@ export default function Edit() {
 
   return (
     <>
-      <Header />
+      <Header title="Admin" />
       <EditOfferContainer>
         <Form editMode editData={offer} />
       </EditOfferContainer>
