@@ -9,10 +9,10 @@ Developing a ReactJs fake cashback App for a awesome company as a test.
 > yarn start
 
 ```
-You can take a look in production server: https://simple-rails-login-app.herokuapp.com/
+You can take a look in production server: https://fake-cashback-front.herokuapp.com/
 ```
-> Admin: https://fake-cashback-front.herokuapp.com/admin
-> Home: https://fake-cashback-front.herokuapp.com/
+> Admin: '/admin'
+> Home: '/'
 ```
 
 ## Author
