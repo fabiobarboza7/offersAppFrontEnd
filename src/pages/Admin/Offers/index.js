@@ -1,22 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 
-import { findAllOffers } from '../../../services/offers.service';
-import Form from '../../../components/Form';
+import Header from '../../../components/Header';
+import { useOffers } from '../../../hooks/offers.hooks';
+
+import { OffersContainer, CreateNewOffer } from './styles';
+import OffersTable from '../../../components/OffersTable';
+import { offersStatus } from '../../../store/offers/actions';
+import { Store } from '../../../store';
 
 export default function Admin() {
+  const offers = useOffers();
+
+  const [, dispatch] = useContext(Store);
+
   useEffect(() => {
-    async function getAllOffers() {
-      const { data } = await findAllOffers();
-      console.log(data);
-    }
-
-    getAllOffers();
-  }, []);
-
+    dispatch(offersStatus([...offers]));
+  }, [dispatch, offers]);
   return (
     <>
-      <Form />
-      <h1>Admin</h1>
+      <Header />
+      <OffersContainer>
+        <OffersTable />
+        <CreateNewOffer>NEW OFFER</CreateNewOffer>
+      </OffersContainer>
     </>
   );
 }

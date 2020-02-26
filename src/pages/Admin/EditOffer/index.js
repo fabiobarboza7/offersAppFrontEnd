@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import { showOffer } from '../../../services/offers.service';
 import Form from '../../../components/Form';
 
+import { EditOfferContainer } from './styles';
+import Header from '../../../components/Header';
+
 export default function Edit() {
   const [offer, setOffer] = useState({});
   const { id } = useParams();
@@ -18,8 +21,10 @@ export default function Edit() {
 
   return (
     <>
-      <h1>Edit</h1>
-      <Form editMode editData={offer} />
+      <Header />
+      <EditOfferContainer>
+        <Form editMode editData={offer} />
+      </EditOfferContainer>
     </>
   );
 }
