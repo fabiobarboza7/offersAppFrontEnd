@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://fake-cashback-api.herokuapp.com/api/v1',
+  baseURL: 'https://fake-cashback-api.herokuapp.com/api/v1',
 });
 
 export default api;
